@@ -13,4 +13,11 @@ services:
       - "5000:5000"
     container_name: backend
     volumes:
-      - ./backend/src:/usr/src/app/src
+      - ./backend/bin:/usr/src/app/bin
+      - ./backend/public:/usr/src/app/public
+      - ./backend/routes:/usr/src/app/routes
+      - ./backend/views:/usr/src/app/views
+      - ./backend/app.js:/usr/src/app/app.js
+    environment:
+      - NODE_ENV=development
+      - PORT=5000

@@ -6,8 +6,6 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY ./src/app.js ./src/
-
 EXPOSE 5000
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "watch"]
